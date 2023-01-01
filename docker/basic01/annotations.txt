@@ -1,0 +1,17 @@
+1) build image
+
+docker build -t sample .
+
+2) verify image built
+
+docker images
+
+3) Run the docker container . The -p flag maps a port running inside the container to your host.
+The — — name is used to give name to the container and sample is image name which was built earlier .
+
+docker run --name flask_app  -p 8000:5000 sample
+
+
+4) Open the browser
+
+http:://127.0.0.1:8000/
